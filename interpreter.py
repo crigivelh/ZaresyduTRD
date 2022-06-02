@@ -14,15 +14,6 @@ class Interpreter:
     SUPPORTED_REFUTERS = []
 
     def __init__(self, instance, **kwargs):
-        """Initialize an interpreter.
-
-        :param instance: An object of type CausalModel, CausalEstimate or CausalRefutation.
-
-        """
-
-        self.model = None
-        self.estimate = None
-        self.refutation = None
 
         if isinstance(instance, dowhy.causal_model.CausalModel):
             self.model = instance
